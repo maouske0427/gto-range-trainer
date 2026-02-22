@@ -19,6 +19,7 @@
     const $ = id => document.getElementById(id);
     const categorySelect = $('category-select');
     const scenarioSelect = $('scenario-select');
+    const borderlineToggle = $('borderline-toggle');
     const scoreDisplay = $('score-display');
     const resetBtn = $('reset-btn');
     const situationText = $('situation-text');
@@ -138,6 +139,30 @@
         ];
     }
 
+    function isBorderlineHand(row, col, grid) {
+        const f = grid[row][col];
+        // 1. Mixed strategy (not just one action has 100%)
+        if (f.fold > 0 && f.fold < 100) return true;
+        if (f.raise > 0 && f.raise < 100) return true;
+        if (f.call > 0 && f.call < 100) return true;
+
+        // 2. Pure Fold but has non-fold neighbors
+        if (f.fold >= 100) {
+            for (let dr = -1; dr <= 1; dr++) {
+                for (let dc = -1; dc <= 1; dc++) {
+                    if (dr === 0 && dc === 0) continue;
+                    const nr = row + dr;
+                    const nc = col + dc;
+                    if (nr >= 0 && nr < 13 && nc >= 0 && nc < 13) {
+                        const nf = grid[nr][nc];
+                        if (nf.raise > 0 || nf.call > 0) return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
     function generateQuiz() {
         const category = categorySelect.value;
         const scenarios = getScenarios(category);
@@ -149,8 +174,27 @@
         const scenario = scenarios[scenarioIdx];
         const grid = buildGrid(scenario, category);
 
-        const row = Math.floor(Math.random() * 13);
-        const col = Math.floor(Math.random() * 13);
+        let candidates = [];
+        if (borderlineToggle.checked) {
+            for (let r = 0; r < 13; r++) {
+                for (let c = 0; c < 13; c++) {
+                    if (isBorderlineHand(r, c, grid)) {
+                        candidates.push({ row: r, col: c });
+                    }
+                }
+            }
+        }
+
+        let row, col;
+        if (candidates.length > 0) {
+            const pick = candidates[Math.floor(Math.random() * candidates.length)];
+            row = pick.row;
+            col = pick.col;
+        } else {
+            row = Math.floor(Math.random() * 13);
+            col = Math.floor(Math.random() * 13);
+        }
+
         const hand = gridToHand(row, col);
         const freqs = grid[row][col];
 
@@ -305,6 +349,10 @@
     });
 
     nextBtn.addEventListener('click', () => {
+        generateQuiz();
+    });
+
+    borderlineToggle.addEventListener('change', () => {
         generateQuiz();
     });
 
