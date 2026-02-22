@@ -1,0 +1,13 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Node modules (if any)
+node_modules/
+
+# Local data files that shouldn't be tracked
+*.log

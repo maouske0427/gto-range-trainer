@@ -1,0 +1,422 @@
+/* ==============================
+   GTO Range Trainer - Style
+   ============================== */
+
+:root {
+    --bg-primary: #1a1a2e;
+    --bg-secondary: #16213e;
+    --bg-card: #0f3460;
+    --text-primary: #e8e8e8;
+    --text-secondary: #a0a0b0;
+    --accent: #e94560;
+    --raise-color: #e94560;
+    --raise-bg: rgba(233, 69, 96, 0.85);
+    --mixed-color: #f5a623;
+    --mixed-bg: rgba(245, 166, 35, 0.75);
+    --call-color: #27ae60;
+    --call-bg: rgba(39, 174, 96, 0.8);
+    --fold-color: #3a7bd5;
+    --fold-bg: rgba(58, 123, 213, 0.5);
+    --correct-color: #2ecc71;
+    --wrong-color: #e74c3c;
+    --grid-border: rgba(255, 255, 255, 0.12);
+    --radius: 8px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.app {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* ---------- Header ---------- */
+header {
+    text-align: center;
+    padding: 20px 0 8px;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+/* ---------- Score Bar ---------- */
+.score-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-secondary);
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    margin: 12px 0;
+    font-size: 0.9rem;
+}
+
+.btn-small {
+    background: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.78rem;
+    transition: all 0.2s;
+}
+
+.btn-small:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+/* ---------- Controls ---------- */
+.controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.control-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.control-group label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+select {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23a0a0b0'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+select:focus {
+    border-color: var(--accent);
+}
+
+/* ---------- Quiz Area ---------- */
+.quiz-area {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.situation-text {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.hand-text {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    min-height: 60px;
+}
+
+.answer-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-answer {
+    padding: 12px 28px;
+    border: 2px solid transparent;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #fff;
+    min-width: 100px;
+}
+
+.btn-answer.raise {
+    background: var(--raise-bg);
+    border-color: var(--raise-color);
+}
+
+.btn-answer.raise:hover {
+    background: var(--raise-color);
+    transform: translateY(-2px);
+}
+
+.btn-answer.call {
+    background: var(--call-bg);
+    border-color: var(--call-color);
+}
+
+.btn-answer.call:hover {
+    background: var(--call-color);
+    transform: translateY(-2px);
+}
+
+.btn-answer.fold {
+    background: var(--fold-bg);
+    border-color: var(--fold-color);
+}
+
+.btn-answer.fold:hover {
+    background: var(--fold-color);
+    transform: translateY(-2px);
+}
+
+.btn-answer.mixed {
+    background: var(--mixed-bg);
+    border-color: var(--mixed-color);
+}
+
+.btn-answer.mixed:hover {
+    background: var(--mixed-color);
+    transform: translateY(-2px);
+}
+
+.btn-answer.check {
+    background: rgba(160, 160, 176, 0.4);
+    border-color: var(--text-secondary);
+}
+
+.btn-answer.check:hover {
+    background: rgba(160, 160, 176, 0.6);
+    transform: translateY(-2px);
+}
+
+/* ---------- Result Area ---------- */
+.result-area {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.result-area.hidden {
+    display: none;
+}
+
+.result-message {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 12px;
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+}
+
+.result-message.correct {
+    background: rgba(46, 204, 113, 0.15);
+    color: var(--correct-color);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.result-message.wrong {
+    background: rgba(231, 76, 60, 0.15);
+    color: var(--wrong-color);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+/* ---------- Range Grid ---------- */
+.range-grid {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 1px;
+    margin: 12px auto;
+    max-width: 100%;
+    font-size: 0.6rem;
+    background: var(--grid-border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.grid-cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.58rem;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    transition: all 0.15s;
+    position: relative;
+}
+
+.grid-cell.header {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    font-weight: 700;
+    font-size: 0.65rem;
+}
+
+.grid-cell.corner {
+    background: var(--bg-secondary);
+}
+
+.grid-cell.raise-pure {
+    background: var(--raise-bg);
+    color: #fff;
+}
+
+.grid-cell.raise-mixed {
+    background: var(--mixed-bg);
+    color: #fff;
+}
+
+.grid-cell.call-action {
+    background: var(--call-bg);
+    color: #fff;
+}
+
+.grid-cell.fold-action {
+    background: var(--fold-bg);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.grid-cell.check-action {
+    background: rgba(160, 160, 176, 0.25);
+    color: var(--text-secondary);
+}
+
+.grid-cell.current-hand {
+    outline: 3px solid #fff;
+    outline-offset: -1px;
+    z-index: 2;
+    animation: pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        outline-color: #fff;
+    }
+
+    to {
+        outline-color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+/* ---------- Legend ---------- */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 12px 0;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.legend-color {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+}
+
+.legend-color.raise {
+    background: var(--raise-bg);
+}
+
+.legend-color.mixed {
+    background: var(--mixed-bg);
+}
+
+.legend-color.call {
+    background: var(--call-bg);
+}
+
+.legend-color.fold {
+    background: var(--fold-bg);
+}
+
+/* ---------- Primary Button ---------- */
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 14px 40px;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 16px;
+}
+
+.btn-primary:hover {
+    background: #c42b4c;
+    transform: translateY(-1px);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+    .controls {
+        flex-direction: column;
+    }
+
+    .hand-text {
+        font-size: 2.2rem;
+    }
+
+    .answer-buttons {
+        gap: 8px;
+    }
+
+    .btn-answer {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        min-width: 80px;
+    }
+
+    .grid-cell {
+        font-size: 0.5rem;
+    }
+
+    .legend {
+        gap: 10px;
+        font-size: 0.7rem;
+    }
+}
