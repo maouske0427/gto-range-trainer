@@ -1,9 +1,4 @@
-// GTO Range Data (Parsed from range.txt)
-const RANGE_DATA = {
-    "poker_strategy": {
-        "game_format": "6-Max Cash",
-        "stack_depth": "100bb"
-    },
+{
     "open_ranges_rfi": [
         {
             "position": "UTG",
@@ -2282,4 +2277,4 @@ const RANGE_DATA = {
             }
         }
     ]
-};
+}

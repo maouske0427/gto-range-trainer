@@ -6,20 +6,20 @@
     --bg-primary: #1a1a2e;
     --bg-secondary: #16213e;
     --bg-card: #0f3460;
-    --text-primary: #e8e8e8;
-    --text-secondary: #a0a0b0;
-    --accent: #e94560;
-    --raise-color: #e94560;
-    --raise-bg: rgba(233, 69, 96, 0.85);
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0c0;
+    --accent: #de4646;
+    --raise-color: #de4646;
+    --raise-bg: #de4646;
     --mixed-color: #f5a623;
-    --mixed-bg: rgba(245, 166, 35, 0.75);
-    --call-color: #27ae60;
-    --call-bg: rgba(39, 174, 96, 0.8);
-    --fold-color: #3a7bd5;
-    --fold-bg: rgba(58, 123, 213, 0.5);
+    --mixed-bg: #f5a623;
+    --call-color: #5ab464;
+    --call-bg: #5ab464;
+    --fold-color: #4678b4;
+    --fold-bg: #4678b4;
     --correct-color: #2ecc71;
     --wrong-color: #e74c3c;
-    --grid-border: rgba(255, 255, 255, 0.12);
+    --grid-border: #1a1a2e;
     --radius: 8px;
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
@@ -274,8 +274,8 @@ select:focus {
     justify-content: center;
     font-weight: 600;
     font-size: 0.58rem;
-    background: var(--bg-primary);
-    color: var(--text-secondary);
+    background: #24243e;
+    color: #ffffff;
     transition: all 0.15s;
     position: relative;
 }
@@ -308,7 +308,7 @@ select:focus {
 
 .grid-cell.fold-action {
     background: var(--fold-bg);
-    color: rgba(255, 255, 255, 0.7);
+    color: #ffffff;
 }
 
 .grid-cell.check-action {
