@@ -301,6 +301,12 @@ select:focus {
     border: 1px solid rgba(231, 76, 60, 0.3);
 }
 
+.result-message.borderline {
+    background: rgba(243, 156, 18, 0.15);
+    color: #f39c12;
+    border: 1px solid rgba(243, 156, 18, 0.3);
+}
+
 /* ---------- Range Grid ---------- */
 .range-grid {
     display: grid;

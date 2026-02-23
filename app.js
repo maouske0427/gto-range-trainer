@@ -253,8 +253,15 @@
             resultMessage.textContent = `⭕ 正解！ ${breakdown}`;
             resultMessage.className = 'result-message correct';
         } else {
-            resultMessage.textContent = `❌ 不正解。正解は ${correctLabel} です。(${breakdown})`;
-            resultMessage.className = 'result-message wrong';
+            // Check for borderline (minority action but has frequency > 0)
+            const chosenFreq = f[answer] || 0;
+            if (currentQuiz.category === 'rfi' && chosenFreq > 0) {
+                resultMessage.textContent = `△ どちらかというと${correctLabel}寄り！ ${breakdown}`;
+                resultMessage.className = 'result-message borderline';
+            } else {
+                resultMessage.textContent = `❌ 不正解。正解は ${correctLabel} です。(${breakdown})`;
+                resultMessage.className = 'result-message wrong';
+            }
         }
 
         renderGrid(currentQuiz.grid, currentQuiz.row, currentQuiz.col);
