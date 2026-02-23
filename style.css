@@ -227,6 +227,30 @@ select:focus {
     transform: translateY(-2px);
 }
 
+.btn-answer.mixed-raise {
+    background: #e67e22;
+    /* Carrot orange */
+    border-color: #d35400;
+    /* Pumpkin orange */
+}
+
+.btn-answer.mixed-raise:hover {
+    background: #d35400;
+    transform: translateY(-2px);
+}
+
+.btn-answer.mixed-call {
+    background: #a2d149;
+    /* Light green */
+    border-color: #8cb43e;
+    /* Darker light green */
+}
+
+.btn-answer.mixed-call:hover {
+    background: #8cb43e;
+    transform: translateY(-2px);
+}
+
 .btn-answer.mixed {
     background: var(--mixed-bg);
     border-color: var(--mixed-color);

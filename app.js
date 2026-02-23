@@ -134,6 +134,8 @@
         }
         return [
             { label: 'Raise', value: 'raise', cssClass: 'raise' },
+            { label: '混合(Raise寄り)', value: 'mixed-raise', cssClass: 'mixed-raise' },
+            { label: '混合(Call寄り)', value: 'mixed-call', cssClass: 'mixed-call' },
             { label: 'Call', value: 'call', cssClass: 'call' },
             { label: 'Fold', value: 'fold', cssClass: 'fold' }
         ];
@@ -198,16 +200,18 @@
         const hand = gridToHand(row, col);
         const freqs = grid[row][col];
 
-        // Correct action is the one with the highest frequency
+        // Correct action logic
         let correctAction = 'fold';
-        let maxFreq = freqs.fold;
-        if (freqs.raise > maxFreq) {
-            maxFreq = freqs.raise;
-            correctAction = 'raise';
-        }
-        if (freqs.call > maxFreq) {
-            maxFreq = freqs.call;
-            correctAction = 'call';
+        if (category === 'rfi') {
+            if (freqs.raise > 50) correctAction = 'raise';
+            else correctAction = 'fold';
+        } else {
+            // bb_defense 5 options logic
+            if (freqs.raise >= 100) correctAction = 'raise';
+            else if (freqs.raise > 50) correctAction = 'mixed-raise';
+            else if (freqs.call >= 100) correctAction = 'call';
+            else if (freqs.call > 50) correctAction = 'mixed-call';
+            else correctAction = 'fold';
         }
 
         currentQuiz = { category, scenario, grid, row, col, hand, freqs, correctAction };
@@ -241,11 +245,14 @@
         const f = currentQuiz.freqs;
         const breakdown = `Raise: ${Math.round(f.raise)}%, Call: ${Math.round(f.call)}%, Fold: ${Math.round(f.fold)}%`;
 
+        const options = getAnswerOptions(currentQuiz.category);
+        const correctOpt = options.find(o => o.value === currentQuiz.correctAction);
+        const correctLabel = correctOpt ? correctOpt.label : currentQuiz.correctAction.toUpperCase();
+
         if (isCorrect) {
             resultMessage.textContent = `⭕ 正解！ ${breakdown}`;
             resultMessage.className = 'result-message correct';
         } else {
-            const correctLabel = currentQuiz.correctAction.toUpperCase();
             resultMessage.textContent = `❌ 不正解。正解は ${correctLabel} です。(${breakdown})`;
             resultMessage.className = 'result-message wrong';
         }
