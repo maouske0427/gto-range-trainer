@@ -2281,5 +2281,1805 @@ const RANGE_DATA = {
                 }
             }
         }
-    ]
+    ],
+    "vs_3bet_ranges": [
+        {
+                "scenario": "HJ vs UTG",
+                "hero": "HJ",
+                "opponent": "UTG",
+                "ranges": {
+                        "55": {
+                                "raise": 4.1,
+                                "call": 0
+                        },
+                        "66": {
+                                "raise": 12.26,
+                                "call": 0
+                        },
+                        "77": {
+                                "raise": 12.65,
+                                "call": 0
+                        },
+                        "88": {
+                                "raise": 17.38,
+                                "call": 0
+                        },
+                        "99": {
+                                "raise": 26.96,
+                                "call": 0
+                        },
+                        "K8s": {
+                                "raise": 2.41,
+                                "call": 0
+                        },
+                        "T9s": {
+                                "raise": 2.48,
+                                "call": 0
+                        },
+                        "K5s": {
+                                "raise": 3.85,
+                                "call": 0
+                        },
+                        "K7s": {
+                                "raise": 3.91,
+                                "call": 0
+                        },
+                        "87s": {
+                                "raise": 8.38,
+                                "call": 0
+                        },
+                        "QJs": {
+                                "raise": 14.65,
+                                "call": 0
+                        },
+                        "54s": {
+                                "raise": 17.86,
+                                "call": 0
+                        },
+                        "76s": {
+                                "raise": 18.17,
+                                "call": 0
+                        },
+                        "K9s": {
+                                "raise": 20.76,
+                                "call": 0
+                        },
+                        "A3s": {
+                                "raise": 24.09,
+                                "call": 0
+                        },
+                        "65s": {
+                                "raise": 25.86,
+                                "call": 0
+                        },
+                        "A7s": {
+                                "raise": 38.54,
+                                "call": 0
+                        },
+                        "A9s": {
+                                "raise": 42.27,
+                                "call": 0
+                        },
+                        "A8s": {
+                                "raise": 48.01,
+                                "call": 0
+                        },
+                        "ATs": {
+                                "raise": 62.21,
+                                "call": 0
+                        },
+                        "TT": {
+                                "raise": 75.23,
+                                "call": 0
+                        },
+                        "KQo": {
+                                "raise": 84.14,
+                                "call": 0
+                        },
+                        "KTs": {
+                                "raise": 87,
+                                "call": 0
+                        },
+                        "A5s": {
+                                "raise": 94.14,
+                                "call": 0
+                        },
+                        "A4s": {
+                                "raise": 98.61,
+                                "call": 0
+                        },
+                        "JJ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QQ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AQo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KK": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AA": {
+                                "raise": 100,
+                                "call": 0
+                        }
+                }
+        },
+        {
+                "scenario": "CO vs UTG",
+                "hero": "CO",
+                "opponent": "UTG",
+                "ranges": {
+                        "55": {
+                                "raise": 5.16,
+                                "call": 0
+                        },
+                        "66": {
+                                "raise": 14.81,
+                                "call": 0
+                        },
+                        "77": {
+                                "raise": 12.93,
+                                "call": 0
+                        },
+                        "88": {
+                                "raise": 17.8,
+                                "call": 0
+                        },
+                        "99": {
+                                "raise": 25.06,
+                                "call": 0
+                        },
+                        "A2s": {
+                                "raise": 0.01,
+                                "call": 0
+                        },
+                        "K5s": {
+                                "raise": 0.83,
+                                "call": 0
+                        },
+                        "K7s": {
+                                "raise": 1.34,
+                                "call": 0
+                        },
+                        "K8s": {
+                                "raise": 1.87,
+                                "call": 0
+                        },
+                        "T9s": {
+                                "raise": 3.51,
+                                "call": 0
+                        },
+                        "87s": {
+                                "raise": 7.92,
+                                "call": 0
+                        },
+                        "76s": {
+                                "raise": 19.51,
+                                "call": 0
+                        },
+                        "K9s": {
+                                "raise": 21.98,
+                                "call": 0
+                        },
+                        "54s": {
+                                "raise": 22.07,
+                                "call": 0
+                        },
+                        "65s": {
+                                "raise": 26.52,
+                                "call": 0
+                        },
+                        "A3s": {
+                                "raise": 48.36,
+                                "call": 0
+                        },
+                        "A7s": {
+                                "raise": 48.78,
+                                "call": 0
+                        },
+                        "A9s": {
+                                "raise": 52.93,
+                                "call": 0
+                        },
+                        "A8s": {
+                                "raise": 55.07,
+                                "call": 0
+                        },
+                        "QJs": {
+                                "raise": 63.13,
+                                "call": 0
+                        },
+                        "KTs": {
+                                "raise": 68.65,
+                                "call": 0
+                        },
+                        "ATs": {
+                                "raise": 78.73,
+                                "call": 0
+                        },
+                        "TT": {
+                                "raise": 85.3,
+                                "call": 0
+                        },
+                        "A5s": {
+                                "raise": 96.26,
+                                "call": 0
+                        },
+                        "A4s": {
+                                "raise": 99.97,
+                                "call": 0
+                        },
+                        "JJ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QQ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KQo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AQo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KK": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AA": {
+                                "raise": 100,
+                                "call": 0
+                        }
+                }
+        },
+        {
+                "scenario": "CO vs HJ",
+                "hero": "CO",
+                "opponent": "HJ",
+                "ranges": {
+                        "55": {
+                                "raise": 4.85,
+                                "call": 0
+                        },
+                        "66": {
+                                "raise": 22.04,
+                                "call": 0
+                        },
+                        "77": {
+                                "raise": 16.71,
+                                "call": 0
+                        },
+                        "88": {
+                                "raise": 21.06,
+                                "call": 0
+                        },
+                        "99": {
+                                "raise": 29.21,
+                                "call": 0
+                        },
+                        "K7s": {
+                                "raise": 0.08,
+                                "call": 0
+                        },
+                        "T9s": {
+                                "raise": 0.68,
+                                "call": 0
+                        },
+                        "A2s": {
+                                "raise": 3.19,
+                                "call": 0
+                        },
+                        "JTs": {
+                                "raise": 4.71,
+                                "call": 0
+                        },
+                        "QTs": {
+                                "raise": 5.11,
+                                "call": 0
+                        },
+                        "87s": {
+                                "raise": 8.59,
+                                "call": 0
+                        },
+                        "K9s": {
+                                "raise": 10.99,
+                                "call": 0
+                        },
+                        "A6s": {
+                                "raise": 12.08,
+                                "call": 0
+                        },
+                        "KJo": {
+                                "raise": 17.53,
+                                "call": 0
+                        },
+                        "76s": {
+                                "raise": 20.55,
+                                "call": 0
+                        },
+                        "54s": {
+                                "raise": 23.63,
+                                "call": 0
+                        },
+                        "65s": {
+                                "raise": 28.6,
+                                "call": 0
+                        },
+                        "AJo": {
+                                "raise": 42.03,
+                                "call": 0
+                        },
+                        "A9s": {
+                                "raise": 69.63,
+                                "call": 0
+                        },
+                        "A8s": {
+                                "raise": 71.68,
+                                "call": 0
+                        },
+                        "A7s": {
+                                "raise": 74.36,
+                                "call": 0
+                        },
+                        "A3s": {
+                                "raise": 88.43,
+                                "call": 0
+                        },
+                        "A4s": {
+                                "raise": 99.91,
+                                "call": 0
+                        },
+                        "A5s": {
+                                "raise": 99.98,
+                                "call": 0
+                        },
+                        "TT": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KTs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "ATs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "JJ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QQ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KQo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AQo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KK": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AA": {
+                                "raise": 100,
+                                "call": 0
+                        }
+                }
+        },
+        {
+                "scenario": "BTN vs UTG",
+                "hero": "BTN",
+                "opponent": "UTG",
+                "ranges": {
+                        "22": {
+                                "raise": 0,
+                                "call": 17.19
+                        },
+                        "33": {
+                                "raise": 0,
+                                "call": 22.97
+                        },
+                        "44": {
+                                "raise": 2.48,
+                                "call": 32.39
+                        },
+                        "55": {
+                                "raise": 11.88,
+                                "call": 43.43
+                        },
+                        "66": {
+                                "raise": 23.41,
+                                "call": 60.3
+                        },
+                        "77": {
+                                "raise": 31.98,
+                                "call": 68.02
+                        },
+                        "88": {
+                                "raise": 26.68,
+                                "call": 73.32
+                        },
+                        "99": {
+                                "raise": 25.39,
+                                "call": 74.61
+                        },
+                        "A2s": {
+                                "raise": 33.53,
+                                "call": 0.01
+                        },
+                        "97s": {
+                                "raise": 0,
+                                "call": 0.02
+                        },
+                        "KJo": {
+                                "raise": 14.97,
+                                "call": 0.6
+                        },
+                        "64s": {
+                                "raise": 0,
+                                "call": 0.67
+                        },
+                        "86s": {
+                                "raise": 0,
+                                "call": 2.28
+                        },
+                        "T8s": {
+                                "raise": 5.34,
+                                "call": 3.88
+                        },
+                        "AKo": {
+                                "raise": 90.2,
+                                "call": 9.8
+                        },
+                        "J9s": {
+                                "raise": 0.02,
+                                "call": 10.04
+                        },
+                        "QQ": {
+                                "raise": 79.28,
+                                "call": 20.72
+                        },
+                        "AJo": {
+                                "raise": 22.49,
+                                "call": 22.53
+                        },
+                        "87s": {
+                                "raise": 14.89,
+                                "call": 23.33
+                        },
+                        "AQs": {
+                                "raise": 72.76,
+                                "call": 27.24
+                        },
+                        "A3s": {
+                                "raise": 72.3,
+                                "call": 27.7
+                        },
+                        "A4s": {
+                                "raise": 71.68,
+                                "call": 28.32
+                        },
+                        "A7s": {
+                                "raise": 67.28,
+                                "call": 28.67
+                        },
+                        "K9s": {
+                                "raise": 70.26,
+                                "call": 29.69
+                        },
+                        "98s": {
+                                "raise": 0,
+                                "call": 29.97
+                        },
+                        "KQo": {
+                                "raise": 68.45,
+                                "call": 31.55
+                        },
+                        "76s": {
+                                "raise": 18.96,
+                                "call": 33.35
+                        },
+                        "A8s": {
+                                "raise": 65.79,
+                                "call": 34.21
+                        },
+                        "A5s": {
+                                "raise": 60.29,
+                                "call": 39.71
+                        },
+                        "65s": {
+                                "raise": 28.53,
+                                "call": 40.53
+                        },
+                        "54s": {
+                                "raise": 28,
+                                "call": 42.37
+                        },
+                        "QTs": {
+                                "raise": 56.99,
+                                "call": 43.01
+                        },
+                        "T9s": {
+                                "raise": 54.39,
+                                "call": 45.6
+                        },
+                        "QJs": {
+                                "raise": 51.75,
+                                "call": 48.25
+                        },
+                        "A9s": {
+                                "raise": 40.11,
+                                "call": 59.89
+                        },
+                        "AQo": {
+                                "raise": 38.32,
+                                "call": 61.68
+                        },
+                        "KTs": {
+                                "raise": 36.78,
+                                "call": 63.22
+                        },
+                        "JJ": {
+                                "raise": 34.48,
+                                "call": 65.52
+                        },
+                        "KQs": {
+                                "raise": 33.75,
+                                "call": 66.25
+                        },
+                        "ATs": {
+                                "raise": 33.35,
+                                "call": 66.65
+                        },
+                        "JTs": {
+                                "raise": 32.07,
+                                "call": 67.93
+                        },
+                        "AJs": {
+                                "raise": 30.59,
+                                "call": 69.41
+                        },
+                        "TT": {
+                                "raise": 29.36,
+                                "call": 70.64
+                        },
+                        "KJs": {
+                                "raise": 28,
+                                "call": 72
+                        },
+                        "KTo": {
+                                "raise": 0.02,
+                                "call": 0
+                        },
+                        "K7s": {
+                                "raise": 2.8,
+                                "call": 0
+                        },
+                        "K4s": {
+                                "raise": 4.58,
+                                "call": 0
+                        },
+                        "Q9s": {
+                                "raise": 11,
+                                "call": 0
+                        },
+                        "A6s": {
+                                "raise": 15.95,
+                                "call": 0
+                        },
+                        "K5s": {
+                                "raise": 17.08,
+                                "call": 0
+                        },
+                        "K8s": {
+                                "raise": 29.59,
+                                "call": 0
+                        },
+                        "KK": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AA": {
+                                "raise": 100,
+                                "call": 0
+                        }
+                }
+        },
+        {
+                "scenario": "BTN vs HJ",
+                "hero": "BTN",
+                "opponent": "HJ",
+                "ranges": {
+                        "22": {
+                                "raise": 0,
+                                "call": 22.17
+                        },
+                        "33": {
+                                "raise": 0,
+                                "call": 25.21
+                        },
+                        "44": {
+                                "raise": 2.98,
+                                "call": 35.99
+                        },
+                        "55": {
+                                "raise": 16.54,
+                                "call": 51.16
+                        },
+                        "66": {
+                                "raise": 30.74,
+                                "call": 69.26
+                        },
+                        "77": {
+                                "raise": 35.45,
+                                "call": 64.55
+                        },
+                        "88": {
+                                "raise": 26.3,
+                                "call": 73.7
+                        },
+                        "99": {
+                                "raise": 30.18,
+                                "call": 69.82
+                        },
+                        "86s": {
+                                "raise": 0,
+                                "call": 0.01
+                        },
+                        "97s": {
+                                "raise": 0,
+                                "call": 1.33
+                        },
+                        "QQ": {
+                                "raise": 97.6,
+                                "call": 2.4
+                        },
+                        "A6s": {
+                                "raise": 56.7,
+                                "call": 2.99
+                        },
+                        "A2s": {
+                                "raise": 65.12,
+                                "call": 3.73
+                        },
+                        "T8s": {
+                                "raise": 0.66,
+                                "call": 4.95
+                        },
+                        "K8s": {
+                                "raise": 40.32,
+                                "call": 8.97
+                        },
+                        "AQs": {
+                                "raise": 89.11,
+                                "call": 10.89
+                        },
+                        "J9s": {
+                                "raise": 0.09,
+                                "call": 12.52
+                        },
+                        "KJo": {
+                                "raise": 24.89,
+                                "call": 14.31
+                        },
+                        "87s": {
+                                "raise": 17.53,
+                                "call": 22.26
+                        },
+                        "A3s": {
+                                "raise": 75.14,
+                                "call": 24.86
+                        },
+                        "A7s": {
+                                "raise": 74.67,
+                                "call": 25.33
+                        },
+                        "98s": {
+                                "raise": 0,
+                                "call": 28.81
+                        },
+                        "76s": {
+                                "raise": 19.74,
+                                "call": 30.03
+                        },
+                        "A4s": {
+                                "raise": 69.4,
+                                "call": 30.6
+                        },
+                        "KQo": {
+                                "raise": 68.88,
+                                "call": 31.12
+                        },
+                        "65s": {
+                                "raise": 22.79,
+                                "call": 33.91
+                        },
+                        "A8s": {
+                                "raise": 64.94,
+                                "call": 35.06
+                        },
+                        "AJo": {
+                                "raise": 60.05,
+                                "call": 35.06
+                        },
+                        "54s": {
+                                "raise": 24.35,
+                                "call": 38.39
+                        },
+                        "K9s": {
+                                "raise": 58.69,
+                                "call": 41.31
+                        },
+                        "A5s": {
+                                "raise": 56.88,
+                                "call": 43.12
+                        },
+                        "QTs": {
+                                "raise": 54.61,
+                                "call": 45.39
+                        },
+                        "T9s": {
+                                "raise": 48.44,
+                                "call": 51.55
+                        },
+                        "KJs": {
+                                "raise": 48.22,
+                                "call": 51.78
+                        },
+                        "AQo": {
+                                "raise": 41.76,
+                                "call": 58.24
+                        },
+                        "JJ": {
+                                "raise": 41.11,
+                                "call": 58.89
+                        },
+                        "TT": {
+                                "raise": 40.06,
+                                "call": 59.94
+                        },
+                        "A9s": {
+                                "raise": 35.9,
+                                "call": 64.1
+                        },
+                        "QJs": {
+                                "raise": 34.57,
+                                "call": 65.43
+                        },
+                        "KTs": {
+                                "raise": 32.01,
+                                "call": 67.99
+                        },
+                        "JTs": {
+                                "raise": 31.26,
+                                "call": 68.74
+                        },
+                        "KQs": {
+                                "raise": 28.28,
+                                "call": 71.72
+                        },
+                        "AJs": {
+                                "raise": 27.15,
+                                "call": 72.85
+                        },
+                        "ATs": {
+                                "raise": 21.34,
+                                "call": 78.66
+                        },
+                        "KTo": {
+                                "raise": 6.39,
+                                "call": 0
+                        },
+                        "Q8s": {
+                                "raise": 7.81,
+                                "call": 0
+                        },
+                        "ATo": {
+                                "raise": 12.2,
+                                "call": 0
+                        },
+                        "QJo": {
+                                "raise": 16.21,
+                                "call": 0
+                        },
+                        "K5s": {
+                                "raise": 27.04,
+                                "call": 0
+                        },
+                        "K7s": {
+                                "raise": 32.25,
+                                "call": 0
+                        },
+                        "Q9s": {
+                                "raise": 75.73,
+                                "call": 0
+                        },
+                        "KK": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AA": {
+                                "raise": 100,
+                                "call": 0
+                        }
+                }
+        },
+        {
+                "scenario": "BTN vs CO",
+                "hero": "BTN",
+                "opponent": "CO",
+                "ranges": {
+                        "22": {
+                                "raise": 0,
+                                "call": 23.52
+                        },
+                        "33": {
+                                "raise": 0,
+                                "call": 28.82
+                        },
+                        "44": {
+                                "raise": 8.21,
+                                "call": 44.12
+                        },
+                        "55": {
+                                "raise": 21.93,
+                                "call": 71.09
+                        },
+                        "66": {
+                                "raise": 35.7,
+                                "call": 64.3
+                        },
+                        "77": {
+                                "raise": 28.08,
+                                "call": 71.92
+                        },
+                        "88": {
+                                "raise": 29.79,
+                                "call": 70.21
+                        },
+                        "99": {
+                                "raise": 35.63,
+                                "call": 64.37
+                        },
+                        "AQs": {
+                                "raise": 99.99,
+                                "call": 0.01
+                        },
+                        "97s": {
+                                "raise": 0,
+                                "call": 0.05
+                        },
+                        "K6s": {
+                                "raise": 1.03,
+                                "call": 0.08
+                        },
+                        "QJo": {
+                                "raise": 45.37,
+                                "call": 1.23
+                        },
+                        "A2s": {
+                                "raise": 95.87,
+                                "call": 4.13
+                        },
+                        "ATo": {
+                                "raise": 63.06,
+                                "call": 7.81
+                        },
+                        "T8s": {
+                                "raise": 0,
+                                "call": 9.99
+                        },
+                        "Q9s": {
+                                "raise": 89.48,
+                                "call": 10.52
+                        },
+                        "K7s": {
+                                "raise": 49.67,
+                                "call": 10.73
+                        },
+                        "A6s": {
+                                "raise": 87.75,
+                                "call": 12.25
+                        },
+                        "K8s": {
+                                "raise": 65.36,
+                                "call": 14.2
+                        },
+                        "87s": {
+                                "raise": 15.7,
+                                "call": 25.68
+                        },
+                        "A7s": {
+                                "raise": 73.58,
+                                "call": 26.42
+                        },
+                        "KJo": {
+                                "raise": 68.32,
+                                "call": 27.93
+                        },
+                        "A3s": {
+                                "raise": 71.36,
+                                "call": 28.64
+                        },
+                        "76s": {
+                                "raise": 21.79,
+                                "call": 29.23
+                        },
+                        "65s": {
+                                "raise": 28.25,
+                                "call": 30.15
+                        },
+                        "JJ": {
+                                "raise": 68.98,
+                                "call": 31.02
+                        },
+                        "J9s": {
+                                "raise": 40.74,
+                                "call": 31.39
+                        },
+                        "98s": {
+                                "raise": 2.92,
+                                "call": 31.53
+                        },
+                        "54s": {
+                                "raise": 20.15,
+                                "call": 32.51
+                        },
+                        "AJo": {
+                                "raise": 65.93,
+                                "call": 34.07
+                        },
+                        "A4s": {
+                                "raise": 65.85,
+                                "call": 34.15
+                        },
+                        "KQo": {
+                                "raise": 62.2,
+                                "call": 37.8
+                        },
+                        "A5s": {
+                                "raise": 59.32,
+                                "call": 40.68
+                        },
+                        "KJs": {
+                                "raise": 54.94,
+                                "call": 45.06
+                        },
+                        "A8s": {
+                                "raise": 48.83,
+                                "call": 51.17
+                        },
+                        "KQs": {
+                                "raise": 48.18,
+                                "call": 51.82
+                        },
+                        "K9s": {
+                                "raise": 46.88,
+                                "call": 53.12
+                        },
+                        "T9s": {
+                                "raise": 45.98,
+                                "call": 54.02
+                        },
+                        "AQo": {
+                                "raise": 43.94,
+                                "call": 56.06
+                        },
+                        "JTs": {
+                                "raise": 40.8,
+                                "call": 59.2
+                        },
+                        "AJs": {
+                                "raise": 38.82,
+                                "call": 61.18
+                        },
+                        "KTs": {
+                                "raise": 38.25,
+                                "call": 61.75
+                        },
+                        "TT": {
+                                "raise": 37.73,
+                                "call": 62.27
+                        },
+                        "QJs": {
+                                "raise": 36.58,
+                                "call": 63.42
+                        },
+                        "A9s": {
+                                "raise": 28.22,
+                                "call": 71.78
+                        },
+                        "ATs": {
+                                "raise": 23.82,
+                                "call": 76.18
+                        },
+                        "QTs": {
+                                "raise": 19.08,
+                                "call": 80.92
+                        },
+                        "QTo": {
+                                "raise": 6.78,
+                                "call": 0
+                        },
+                        "KTo": {
+                                "raise": 8.41,
+                                "call": 0
+                        },
+                        "K5s": {
+                                "raise": 16.46,
+                                "call": 0
+                        },
+                        "Q8s": {
+                                "raise": 17.01,
+                                "call": 0
+                        },
+                        "QQ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KK": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AA": {
+                                "raise": 100,
+                                "call": 0
+                        }
+                }
+        },
+        {
+                "scenario": "SB vs UTG",
+                "hero": "SB",
+                "opponent": "UTG",
+                "ranges": {
+                        "55": {
+                                "raise": 8.13,
+                                "call": 0
+                        },
+                        "66": {
+                                "raise": 13.81,
+                                "call": 0
+                        },
+                        "77": {
+                                "raise": 30.2,
+                                "call": 0
+                        },
+                        "88": {
+                                "raise": 44.66,
+                                "call": 0
+                        },
+                        "99": {
+                                "raise": 71.16,
+                                "call": 0
+                        },
+                        "A7s": {
+                                "raise": 0.43,
+                                "call": 0
+                        },
+                        "A3s": {
+                                "raise": 1,
+                                "call": 0
+                        },
+                        "T9s": {
+                                "raise": 1.86,
+                                "call": 0
+                        },
+                        "K9s": {
+                                "raise": 2.37,
+                                "call": 0
+                        },
+                        "A9s": {
+                                "raise": 2.9,
+                                "call": 0
+                        },
+                        "87s": {
+                                "raise": 6.04,
+                                "call": 0
+                        },
+                        "A8s": {
+                                "raise": 11.1,
+                                "call": 0
+                        },
+                        "JTs": {
+                                "raise": 11.36,
+                                "call": 0
+                        },
+                        "KQo": {
+                                "raise": 12.45,
+                                "call": 0
+                        },
+                        "76s": {
+                                "raise": 15.68,
+                                "call": 0
+                        },
+                        "65s": {
+                                "raise": 24.91,
+                                "call": 0
+                        },
+                        "54s": {
+                                "raise": 31.05,
+                                "call": 0
+                        },
+                        "QTs": {
+                                "raise": 46.68,
+                                "call": 0
+                        },
+                        "AQo": {
+                                "raise": 52.36,
+                                "call": 0
+                        },
+                        "A4s": {
+                                "raise": 63.34,
+                                "call": 0
+                        },
+                        "A5s": {
+                                "raise": 72.83,
+                                "call": 0
+                        },
+                        "KTs": {
+                                "raise": 94.89,
+                                "call": 0
+                        },
+                        "TT": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "ATs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "JJ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QQ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KK": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AA": {
+                                "raise": 100,
+                                "call": 0
+                        }
+                }
+        },
+        {
+                "scenario": "SB vs HJ",
+                "hero": "SB",
+                "opponent": "HJ",
+                "ranges": {
+                        "55": {
+                                "raise": 10.8,
+                                "call": 0
+                        },
+                        "66": {
+                                "raise": 23.06,
+                                "call": 0
+                        },
+                        "77": {
+                                "raise": 49.13,
+                                "call": 0
+                        },
+                        "88": {
+                                "raise": 65.96,
+                                "call": 0
+                        },
+                        "99": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "T9s": {
+                                "raise": 0.34,
+                                "call": 0
+                        },
+                        "A7s": {
+                                "raise": 6.65,
+                                "call": 0
+                        },
+                        "87s": {
+                                "raise": 6.68,
+                                "call": 0
+                        },
+                        "76s": {
+                                "raise": 8.84,
+                                "call": 0
+                        },
+                        "A8s": {
+                                "raise": 9.27,
+                                "call": 0
+                        },
+                        "A3s": {
+                                "raise": 10.54,
+                                "call": 0
+                        },
+                        "A9s": {
+                                "raise": 14.17,
+                                "call": 0
+                        },
+                        "65s": {
+                                "raise": 14.6,
+                                "call": 0
+                        },
+                        "K9s": {
+                                "raise": 16.53,
+                                "call": 0
+                        },
+                        "54s": {
+                                "raise": 18.53,
+                                "call": 0
+                        },
+                        "KQo": {
+                                "raise": 32.63,
+                                "call": 0
+                        },
+                        "A4s": {
+                                "raise": 61.96,
+                                "call": 0
+                        },
+                        "JTs": {
+                                "raise": 66.47,
+                                "call": 0
+                        },
+                        "QTs": {
+                                "raise": 72.3,
+                                "call": 0
+                        },
+                        "A5s": {
+                                "raise": 93.6,
+                                "call": 0
+                        },
+                        "TT": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KTs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "ATs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "JJ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QQ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AQo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KK": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AA": {
+                                "raise": 100,
+                                "call": 0
+                        }
+                }
+        },
+        {
+                "scenario": "SB vs CO",
+                "hero": "SB",
+                "opponent": "CO",
+                "ranges": {
+                        "55": {
+                                "raise": 21.34,
+                                "call": 0
+                        },
+                        "66": {
+                                "raise": 32.66,
+                                "call": 0
+                        },
+                        "77": {
+                                "raise": 73.16,
+                                "call": 0
+                        },
+                        "88": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "99": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "87s": {
+                                "raise": 2.91,
+                                "call": 0
+                        },
+                        "54s": {
+                                "raise": 5.58,
+                                "call": 0
+                        },
+                        "65s": {
+                                "raise": 8.33,
+                                "call": 0
+                        },
+                        "76s": {
+                                "raise": 9.19,
+                                "call": 0
+                        },
+                        "A3s": {
+                                "raise": 12.59,
+                                "call": 0
+                        },
+                        "A7s": {
+                                "raise": 14.98,
+                                "call": 0
+                        },
+                        "T9s": {
+                                "raise": 16.47,
+                                "call": 0
+                        },
+                        "KJo": {
+                                "raise": 17.35,
+                                "call": 0
+                        },
+                        "A8s": {
+                                "raise": 25.56,
+                                "call": 0
+                        },
+                        "J9s": {
+                                "raise": 28.78,
+                                "call": 0
+                        },
+                        "AJo": {
+                                "raise": 34.52,
+                                "call": 0
+                        },
+                        "K9s": {
+                                "raise": 38.44,
+                                "call": 0
+                        },
+                        "A4s": {
+                                "raise": 71.65,
+                                "call": 0
+                        },
+                        "KQo": {
+                                "raise": 73.13,
+                                "call": 0
+                        },
+                        "A9s": {
+                                "raise": 90.53,
+                                "call": 0
+                        },
+                        "A5s": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "TT": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "JTs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QTs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KTs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "ATs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "JJ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QQ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AQo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KK": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AA": {
+                                "raise": 100,
+                                "call": 0
+                        }
+                }
+        },
+        {
+                "scenario": "SB vs BTN",
+                "hero": "SB",
+                "opponent": "BTN",
+                "ranges": {
+                        "44": {
+                                "raise": 0.09,
+                                "call": 0
+                        },
+                        "55": {
+                                "raise": 44.26,
+                                "call": 0
+                        },
+                        "66": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "77": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "88": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "99": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "JTo": {
+                                "raise": 1.02,
+                                "call": 0
+                        },
+                        "54s": {
+                                "raise": 2.84,
+                                "call": 0
+                        },
+                        "65s": {
+                                "raise": 5.13,
+                                "call": 0
+                        },
+                        "A6s": {
+                                "raise": 5.72,
+                                "call": 0
+                        },
+                        "76s": {
+                                "raise": 9.75,
+                                "call": 0
+                        },
+                        "KTo": {
+                                "raise": 11.34,
+                                "call": 0
+                        },
+                        "K8s": {
+                                "raise": 13.81,
+                                "call": 0
+                        },
+                        "K7s": {
+                                "raise": 14.29,
+                                "call": 0
+                        },
+                        "Q9s": {
+                                "raise": 15.17,
+                                "call": 0
+                        },
+                        "A3s": {
+                                "raise": 16.41,
+                                "call": 0
+                        },
+                        "ATo": {
+                                "raise": 27.83,
+                                "call": 0
+                        },
+                        "T8s": {
+                                "raise": 50.35,
+                                "call": 0
+                        },
+                        "KJo": {
+                                "raise": 63.57,
+                                "call": 0
+                        },
+                        "A4s": {
+                                "raise": 96.39,
+                                "call": 0
+                        },
+                        "A7s": {
+                                "raise": 99.73,
+                                "call": 0
+                        },
+                        "J9s": {
+                                "raise": 99.93,
+                                "call": 0
+                        },
+                        "A5s": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "A8s": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "T9s": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "K9s": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "A9s": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "TT": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "JTs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QTs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KTs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "ATs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "JJ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AJs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AJo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "QQ": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KQo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AQs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AQo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "KK": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKs": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AKo": {
+                                "raise": 100,
+                                "call": 0
+                        },
+                        "AA": {
+                                "raise": 100,
+                                "call": 0
+                        }
+                }
+        }
+]
 };

@@ -55,7 +55,7 @@
                 grid[pos.row][pos.col].raise = val;
                 grid[pos.row][pos.col].fold = Math.max(0, 100 - val);
                 grid[pos.row][pos.col].call = 0;
-            } else if (category === 'bb_defense') {
+            } else if (category === 'bb_defense' || category === 'vs_3bet') {
                 const r = val.raise || 0;
                 const c = val.call || 0;
                 grid[pos.row][pos.col].raise = r;
@@ -98,12 +98,13 @@
         if (!rangeData) return [];
         if (category === 'rfi') return rangeData.open_ranges_rfi || [];
         if (category === 'bb_defense') return rangeData.bb_defense_ranges || [];
+        if (category === 'vs_3bet') return rangeData.vs_3bet_ranges || [];
         return [];
     }
 
     function getScenarioLabel(scenario, category) {
         if (category === 'rfi') return `${scenario.position} RFI`;
-        if (category === 'bb_defense') return scenario.scenario;
+        if (category === 'bb_defense' || category === 'vs_3bet') return scenario.scenario;
         return '';
     }
 
@@ -218,7 +219,9 @@
 
         situationText.textContent = category === 'rfi' ?
             `${scenario.position} からオープン。このハンドは？` :
-            `${scenario.scenario}。BBであなたのアクションは？`;
+            category === 'bb_defense' ?
+                `${scenario.scenario}。BBであなたのアクションは？` :
+                `${scenario.scenario}。Open Raiseが来ました。あなたのアクションは？`;
         handText.textContent = hand;
 
         const options = getAnswerOptions(category);
@@ -333,12 +336,6 @@
             return situationText.textContent = 'range-data.js 読み込みエラー';
         }
         rangeData = RANGE_DATA;
-        for (let i = 0; i < categorySelect.options.length; i++) {
-            if (categorySelect.options[i].value === 'vs_3bet') {
-                categorySelect.remove(i);
-                break;
-            }
-        }
         populateScenarios();
         generateQuiz();
     }
