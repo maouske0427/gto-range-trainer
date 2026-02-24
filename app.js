@@ -55,7 +55,7 @@
                 grid[pos.row][pos.col].raise = val;
                 grid[pos.row][pos.col].fold = Math.max(0, 100 - val);
                 grid[pos.row][pos.col].call = 0;
-            } else if (category === 'bb_defense' || category === 'vs_3bet') {
+            } else if (category === 'bb_defense' || category === 'vs_open') {
                 const r = val.raise || 0;
                 const c = val.call || 0;
                 grid[pos.row][pos.col].raise = r;
@@ -98,13 +98,13 @@
         if (!rangeData) return [];
         if (category === 'rfi') return rangeData.open_ranges_rfi || [];
         if (category === 'bb_defense') return rangeData.bb_defense_ranges || [];
-        if (category === 'vs_3bet') return rangeData.vs_3bet_ranges || [];
+        if (category === 'vs_open') return rangeData.vs_open_ranges || [];
         return [];
     }
 
     function getScenarioLabel(scenario, category) {
         if (category === 'rfi') return `${scenario.position} RFI`;
-        if (category === 'bb_defense' || category === 'vs_3bet') return scenario.scenario;
+        if (category === 'bb_defense' || category === 'vs_open') return scenario.scenario;
         return '';
     }
 
