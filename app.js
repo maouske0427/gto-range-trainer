@@ -19,7 +19,7 @@
     // ---- Mode Subtitles ----
     const MODE_SUBTITLES = {
         'cash': '6-Max Cash · 100bb · rake 5% 1.375bb cap · UTG,HJ 2BB · CO,BTN,SB 2.5BB',
-        'tournament': 'Tournament · 40-60bb · BTN RFI focus'
+        'tournament': 'Tournament · 8-Max · 100bb'
     };
 
 
