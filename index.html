@@ -11,8 +11,15 @@
 <body>
     <div class="app">
         <header>
-            <h1>♠ GTO Range Trainer</h1>
-            <p class="subtitle">6-Max Cash · 100bb · rake 5% 1.375bb cap · UTG,HJ 2BB · CO,BTN,SB 2.5BB</p>
+            <div class="header-top">
+                <h1>♠ GTO Range Trainer</h1>
+                <div class="mode-switch">
+                    <button id="mode-cash" class="mode-btn active">キャッシュ</button>
+                    <button id="mode-tournament" class="mode-btn">トーナメント</button>
+                </div>
+            </div>
+            <p id="subtitle" class="subtitle">6-Max Cash · 100bb · rake 5% 1.375bb cap · UTG,HJ 2BB · CO,BTN,SB 2.5BB
+            </p>
         </header>
 
         <div class="score-bar">

@@ -12,8 +12,16 @@
 
     // ---- State ----
     let rangeData = null;
+    let currentMode = 'cash'; // 'cash' or 'tournament'
     let score = { excellent: 0, good: 0, wrong: 0, total: 0 };
     let currentQuiz = null;
+
+    // ---- Mode Subtitles ----
+    const MODE_SUBTITLES = {
+        'cash': '6-Max Cash · 100bb · rake 5% 1.375bb cap · UTG,HJ 2BB · CO,BTN,SB 2.5BB',
+        'tournament': 'Tournament · 40-60bb · BTN RFI focus'
+    };
+
 
     // ---- DOM refs ----
     const $ = id => document.getElementById(id);
@@ -30,6 +38,10 @@
     const rangeGrid = $('range-grid');
     const nextBtn = $('next-btn');
     const quizArea = $('quiz-area');
+    const subtitle = $('subtitle');
+    const btnCash = $('mode-cash');
+    const btnTournament = $('mode-tournament');
+
 
     // ==========================
     // Range Data Processing
@@ -95,12 +107,14 @@
     // ==========================
 
     function getScenarios(category) {
-        if (!rangeData) return [];
-        if (category === 'rfi') return rangeData.open_ranges_rfi || [];
-        if (category === 'bb_defense') return rangeData.bb_defense_ranges || [];
-        if (category === 'vs_open') return rangeData.vs_open_ranges || [];
+        if (!rangeData || !rangeData[currentMode]) return [];
+        const modeData = rangeData[currentMode];
+        if (category === 'rfi') return modeData.open_ranges_rfi || [];
+        if (category === 'bb_defense') return modeData.bb_defense_ranges || [];
+        if (category === 'vs_open') return modeData.vs_open_ranges || [];
         return [];
     }
+
 
     function getScenarioLabel(scenario, category) {
         if (category === 'rfi') return `${scenario.position} RFI`;
@@ -369,7 +383,25 @@
         generateQuiz();
     });
 
+    function switchMode(mode) {
+        if (currentMode === mode) return;
+        currentMode = mode;
+
+        // Update UI
+        btnCash.classList.toggle('active', mode === 'cash');
+        btnTournament.classList.toggle('active', mode === 'tournament');
+        subtitle.textContent = MODE_SUBTITLES[mode];
+
+        // Reset and refresh
+        populateScenarios();
+        generateQuiz();
+    }
+
+    btnCash.addEventListener('click', () => switchMode('cash'));
+    btnTournament.addEventListener('click', () => switchMode('tournament'));
+
     borderlineToggle.addEventListener('change', () => {
+
         generateQuiz();
     });
 
