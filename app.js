@@ -12,7 +12,7 @@
 
     // ---- State ----
     let rangeData = null;
-    let score = { correct: 0, total: 0 };
+    let score = { excellent: 0, good: 0, wrong: 0, total: 0 };
     let currentQuiz = null;
 
     // ---- DOM refs ----
@@ -127,16 +127,8 @@
     }
 
     function getAnswerOptions(category) {
-        if (category === 'rfi') {
-            return [
-                { label: 'Raise', value: 'raise', cssClass: 'raise' },
-                { label: 'Fold', value: 'fold', cssClass: 'fold' }
-            ];
-        }
         return [
             { label: 'Raise', value: 'raise', cssClass: 'raise' },
-            { label: '混合(Raise寄り)', value: 'mixed-raise', cssClass: 'mixed-raise' },
-            { label: '混合(Call寄り)', value: 'mixed-call', cssClass: 'mixed-call' },
             { label: 'Call', value: 'call', cssClass: 'call' },
             { label: 'Fold', value: 'fold', cssClass: 'fold' }
         ];
@@ -201,21 +193,21 @@
         const hand = gridToHand(row, col);
         const freqs = grid[row][col];
 
-        // Correct action logic
-        let correctAction = 'fold';
-        if (category === 'rfi') {
-            if (freqs.raise > 50) correctAction = 'raise';
-            else correctAction = 'fold';
-        } else {
-            // bb_defense 5 options logic
-            if (freqs.raise >= 100) correctAction = 'raise';
-            else if (freqs.raise > 50) correctAction = 'mixed-raise';
-            else if (freqs.call >= 100) correctAction = 'call';
-            else if (freqs.call > 50) correctAction = 'mixed-call';
-            else correctAction = 'fold';
+        // Correct action logic (simplified to 3 actions)
+        const f = freqs;
+        let bestAction = 'fold';
+        let maxFreq = f.fold;
+
+        if (f.raise > maxFreq) {
+            maxFreq = f.raise;
+            bestAction = 'raise';
+        }
+        if (f.call > maxFreq) {
+            maxFreq = f.call;
+            bestAction = 'call';
         }
 
-        currentQuiz = { category, scenario, grid, row, col, hand, freqs, correctAction };
+        currentQuiz = { category, scenario, grid, row, col, hand, freqs, correctAction: bestAction };
 
         situationText.textContent = category === 'rfi' ?
             `${scenario.position} からオープン。このハンドは？` :
@@ -240,31 +232,44 @@
 
     function handleAnswer(answer) {
         if (!currentQuiz) return;
-        const isCorrect = answer === currentQuiz.correctAction;
-        score.total++;
-        if (isCorrect) score.correct++;
-        updateScore();
 
         const f = currentQuiz.freqs;
+        const chosenFreq = f[answer] || 0;
+
+        // Find max frequency among all actions
+        const maxFreq = Math.max(f.raise, f.call, f.fold);
+
+        let resultType = 'wrong'; // ◎, ◯, ✕
+        let resultMark = '✕';
+
+        if (chosenFreq === maxFreq && chosenFreq > 0) {
+            resultType = 'excellent';
+            resultMark = '◎';
+            score.excellent++;
+        } else if (chosenFreq > 0) {
+            resultType = 'good';
+            resultMark = '◯';
+            score.good++;
+        } else {
+            resultType = 'wrong';
+            resultMark = '✕';
+            score.wrong++;
+        }
+
+        score.total++;
+        updateScore();
+
         const breakdown = `Raise: ${Math.round(f.raise)}%, Call: ${Math.round(f.call)}%, Fold: ${Math.round(f.fold)}%`;
 
-        const options = getAnswerOptions(currentQuiz.category);
-        const correctOpt = options.find(o => o.value === currentQuiz.correctAction);
-        const correctLabel = correctOpt ? correctOpt.label : currentQuiz.correctAction.toUpperCase();
-
-        if (isCorrect) {
-            resultMessage.textContent = `⭕ 正解！ ${breakdown}`;
+        if (resultType === 'excellent') {
+            resultMessage.textContent = `${resultMark} 正解！ (最善手) ${breakdown}`;
             resultMessage.className = 'result-message correct';
+        } else if (resultType === 'good') {
+            resultMessage.textContent = `${resultMark} 混合戦略の少数派！ ${breakdown}`;
+            resultMessage.className = 'result-message borderline';
         } else {
-            // Check for borderline (minority action but has frequency > 0)
-            const chosenFreq = f[answer] || 0;
-            if (currentQuiz.category === 'rfi' && chosenFreq > 0) {
-                resultMessage.textContent = `△ どちらかというと${correctLabel}寄り！ ${breakdown}`;
-                resultMessage.className = 'result-message borderline';
-            } else {
-                resultMessage.textContent = `❌ 不正解。正解は ${correctLabel} です。(${breakdown})`;
-                resultMessage.className = 'result-message wrong';
-            }
+            resultMessage.textContent = `${resultMark} 不正解。頻度0%のアクションです。(${breakdown})`;
+            resultMessage.className = 'result-message wrong';
         }
 
         renderGrid(currentQuiz.grid, currentQuiz.row, currentQuiz.col);
@@ -327,8 +332,9 @@
     // ==========================
 
     function updateScore() {
-        const pct = score.total > 0 ? Math.round(score.correct / score.total * 100) : 0;
-        scoreDisplay.textContent = `正解: ${score.correct} / ${score.total} (${pct}%)`;
+        const correctCount = score.excellent + score.good;
+        const pct = score.total > 0 ? Math.round(correctCount / score.total * 100) : 0;
+        scoreDisplay.innerHTML = `<span class="mark-excellent">◎</span>: ${score.excellent} | <span class="mark-good">◯</span>: ${score.good} | <span class="mark-wrong">✕</span>: ${score.wrong} &nbsp;&nbsp; (計: ${score.total}, 正解率: ${pct}%)`;
     }
 
     function init() {
@@ -354,7 +360,7 @@
     });
 
     resetBtn.addEventListener('click', () => {
-        score = { correct: 0, total: 0 };
+        score = { excellent: 0, good: 0, wrong: 0, total: 0 };
         updateScore();
         generateQuiz();
     });

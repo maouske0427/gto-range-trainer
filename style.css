@@ -75,6 +75,21 @@ header h1 {
     font-size: 0.9rem;
 }
 
+.mark-excellent {
+    color: var(--correct-color);
+    font-weight: bold;
+}
+
+.mark-good {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.mark-wrong {
+    color: var(--wrong-color);
+    font-weight: bold;
+}
+
 .btn-small {
     background: transparent;
     border: 1px solid var(--text-secondary);
